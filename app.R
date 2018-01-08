@@ -87,16 +87,16 @@ ui = bootstrapPage(
                 class = "menuContainer",
                 width = 330, draggable = T,
                 h4("Pavement quality measured by Starship delivery robots"),
-                HTML("<a href='https://github.com/martenveskimae'>Märten Veskimäe</a><br>
-                     <a href='https://github.com/Kennu76'>Kevin Kanarbik</a><br>
-                     <a href='https://github.com/TKasekamp'>Tõnis Kasekamp</a>"),
+                HTML("<a href='https://github.com/martenveskimae' target='_blank'>Märten Veskimäe</a><br>
+                     <a href='https://github.com/Kennu76' target='_blank'>Kevin Kanarbik</a><br>
+                     <a href='https://github.com/TKasekamp' target='_blank'>Tõnis Kasekamp</a>"),
                 hr(),
                 textInput("from",NULL,"24.61358-59.44556",placeholder="lon-lat"),
                 textInput("to",NULL,"24.66345-59.42753",placeholder="lon-lat"),
                 checkboxInput("quality", c("Pavement quality"),T),
                 actionButton("submit","Route!",icon("gears")),
                 hr(),
-                HTML("About the project: <a href='https://github.com/martenveskimae/bumpy'>GitHub</a>")
+                HTML("About the project: <a href='https://github.com/martenveskimae/bumpy' target='_blank'>GitHub</a>")
   )
 )
 
