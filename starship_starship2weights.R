@@ -2,6 +2,8 @@
 ## DATA MINING - MTAT.03.183
 ## 5. JAN 2018
 ## MÄRTEN VESKIMÄE
+## KEVIN KANARBIK
+## TÕNIS KASEKAMP
 #################################
 
 library(tidyverse)

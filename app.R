@@ -63,6 +63,7 @@ as_igraph_mod = function(obj,weights = F){
 load("tln_roads.Rda")
 load("tln_lines.Rda")
 load("tln_nodes.Rda")
+tln_lines$w = round(log(tln_lines$w+1),2)
 
 ui = bootstrapPage(
   title = "Bumpy",
@@ -95,7 +96,7 @@ ui = bootstrapPage(
                 checkboxInput("quality", c("Pavement quality"),T),
                 actionButton("submit","Route!",icon("gears")),
                 hr(),
-                HTML("<a href=''>",icon("github"),"</a>")
+                HTML("About the project: <a href='https://github.com/martenveskimae/bumpy'>GitHub</a>")
   )
 )
 
@@ -132,18 +133,16 @@ server = function(input,output,session){
     return(route_tln)
   })
   output$streetsOfTallinn = renderLeaflet({
-    # scale = seq(round(max(tln_lines$w,na.rm=T),0),round(min(tln_lines$w,na.rm=T),0),length.out=10)
-    scale = seq(100,0,length.out=11)
     mapview(tln_lines,trim=T,cex=NULL,popup=NULL,
             maxpixels = 1000,
             zcol = "w")@map %>%
       addTiles(options=tileOptions(minZoom=13, maxZoom=16)) %>%
       setView(24.64714,59.42753,13) %>%
       addLegend("bottomleft",
-                colors = rev(mapviewPalette(name = "mapviewVectorColors")(length(scale))),
+                colors = rev(mapviewPalette(name = "mapviewVectorColors")(6)),
                 values = ~get("w"),
-                labels = round(scale,2),
-                title = "Vibration level (%)",
+                labels = 5:0,
+                title = "Vibration level (%)<br> log transformed",
                 opacity = 1)
   })
   
