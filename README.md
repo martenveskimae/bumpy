@@ -1,4 +1,4 @@
-# bumpy
+# Bumpy
 Pavement quality measured by Starship delivery robots. Visualization &amp; route optimization
 
 ## Authors
