@@ -1,8 +1,9 @@
 # bumpy
-Pavement quality measured by Starship delivery robots. Visualization &amp; route optimization. A data mining project with Kevin Kanarbik and Tõnis Kasekamp.
+Pavement quality measured by Starship delivery robots. Visualization &amp; route optimization
 
 ## Authors
 Märten Veskimäe, Kevin Kanarbik and Tõnis Kasekamp
+
 Institute of Computer Science, University of Tartu
 
 # Business problem
